@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @scrade_session.title
+%p
+  %b Description:
+  = @scrade_session.description
+%p
+  %b From:
+  = @scrade_session.from
+%p
+  %b To:
+  = @scrade_session.to
+
+= link_to 'Edit', edit_scrade_session_path(@scrade_session)
+\|
+= link_to 'Back', scrade_sessions_path

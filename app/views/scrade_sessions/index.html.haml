@@ -1,0 +1,27 @@
+%h1 Listing scrade_sessions
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Description
+      %th From
+      %th To
+      %th
+      %th
+      %th
+
+  %tbody
+    - @scrade_sessions.each do |scrade_session|
+      %tr
+        %td= scrade_session.title
+        %td= scrade_session.description
+        %td= scrade_session.from
+        %td= scrade_session.to
+        %td= link_to 'Show', scrade_session
+        %td= link_to 'Edit', edit_scrade_session_path(scrade_session)
+        %td= link_to 'Destroy', scrade_session, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Scrade session', new_scrade_session_path

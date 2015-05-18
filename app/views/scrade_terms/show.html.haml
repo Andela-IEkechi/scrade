@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Scrade session:
+  = @scrade_term.scrade_session
+%p
+  %b Title:
+  = @scrade_term.title
+%p
+  %b From:
+  = @scrade_term.from
+%p
+  %b To:
+  = @scrade_term.to
+
+= link_to 'Edit', edit_scrade_term_path(@scrade_term)
+\|
+= link_to 'Back', scrade_terms_path
