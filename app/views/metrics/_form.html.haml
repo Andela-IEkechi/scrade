@@ -11,6 +11,6 @@
     = f.text_field :title
   .field
     = f.label :quota
-    = f.number_field :quota
+    = f.select :quota, Metric::QUOTA, prompt: true
   .actions
     = f.submit 'Save'
