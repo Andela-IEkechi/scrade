@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :metrics
+
   root 'home#show'
 
   resources :scrade_sessions
